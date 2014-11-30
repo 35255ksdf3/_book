@@ -1,8 +1,15 @@
-<template name="entrySmall">
-    <div class="entrySmall">
-        <h3>{{title}}</h3>
-        <p>{{author}} - {{timestamp}}</p>
-        <p>{{content}}</p>
-        <a href="{{ pathFor 'post' }}" id="readMore">Weiterlesen...</a>
+<!--
+    Template for blog posts (overview)
+-->
+<template name="blogEntrySmall">
+    <div class='sixteen columns form'>
+        <h3>{{title))</h3>
+        <h6>{{author)) - [[timestamp]]</h6>
+
+        <p>
+           {{content))
+            <br>
+            <a href="{{ pathFor 'post' ))">weiterkesen...</a>
+        </p>
     </div>
 </template>
