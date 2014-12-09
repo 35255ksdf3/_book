@@ -25,6 +25,8 @@ Template.blog.events({
             content: content,
             comments: []
         });
+
+        return false;
     }
 });
 
