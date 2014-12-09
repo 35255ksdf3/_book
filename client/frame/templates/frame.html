@@ -1,0 +1,92 @@
+<template name="frame">
+    <header>
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <nav>
+            <div class='container'>
+                <div class='five columns logo'>
+                    <a href='{{pathFor 'blog'}}'><img src="images/logo_bl_blog.png" style="margin: 5px 5px 5px -15px;"></a>
+                </div>
+                <ul class="six usernav">
+                    <li>
+                        <span class="glyphicon user"></span><a href="{{pathFor 'profile'}}">MaxMuster123</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon profile"></span><a href="{{pathFor 'profile'}}">Profil anzeigen</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon logout"></span><a href="#">ausloggen</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class='container'>
+            <div class='slogan'>
+                <div class='ten columns'>
+                    <h1>Header</h1>
+
+                    <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</h2>
+                </div>
+
+                <div class='six columns'>
+                    <h4>H4.</h4>
+
+                    <p>
+                        Nunc rhoncus, erat quis sagittis convallis, arcu tellus tempor felis, sed tempor ipsum lorem
+                        vitae dolor. Morbi blandit condimentum lectus, id porta est sagittis et. Integer eget tortor sit
+                        amet ante eleifend lacinia quis ut
+                    </p>
+                    <a href='#' class='button medium green'>login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{> Template.dynamic template=contentTemplate}}
+
+
+    <div class='clear'></div>
+
+    <footer>
+        <div class='container'>
+
+            <div class='eight columns'>
+                <h5>Some stuff can go here</h5>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                </p>
+            </div>
+
+            <div class='four columns social'>
+                <h5>Social media</h5>
+                <a href='#'><img src='images/social/dribbble.png'></a>
+                <a href='#'><img src='images/social/facebook.png'></a>
+                <a href='#'><img src='images/social/twitter.png'></a>
+                <a href='#'><img src='images/social/forrst.png'></a>
+            </div>
+
+            <div class='four columns'>
+                <h5>Get in touch</h5>
+
+                <p>
+                    Blubb blubb:
+                    <br>
+                    bla@blubb.com
+                </p>
+
+                <p>
+                    Or drop us a line on:
+                    e: <a href='mailto:contact@free.com'>contact@free.com</a>
+                </p>
+            </div>
+
+            <a id='top' href='#'>&uarr;</a>
+        </div>
+    </footer>
+
+</template>
