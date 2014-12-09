@@ -1,19 +1,14 @@
 <template name="newComment">
-    <div class="newComment">
-        <p>New comment:</p>
-        <!-- If this has no value then this is the root comment -->
-        <input type="hidden" class="replyToId" value="{{replyToId}}" />
-        <table>
-            <tr>
-                <td>Title:</td>
-                <td><input type="text" id="title"/></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <textarea id="content"></textarea>
-                </td>
-            </tr>
-        </table>
-        <button id="submitComment">Submit</button>
+    <div class="sixteen columns newComment" style="margin: 0 !important;">
+        <form>
+            <label>new comment:</label>
+            <label>Title</label>
+            <input type='text' name='title' id='title' placeholder='This is a Title'>
+            <label>Message</label>
+            <textarea cols='50' rows='1' name='content' id='content' placeholder='This is a Message'></textarea>
+            <a class="button medium green" style="margin-left: 10px; margin-top: 5px; width: 910px;" id='submitComment'>submit</a>
+        </form>
     </div>
 </template>
+
+<!--@todo: edit reply-to layout-->

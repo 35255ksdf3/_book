@@ -219,6 +219,14 @@ margin: 0 10px;
 	margin-: 6px 0 6px 0;;
 
 }
+/*
+ * NewComment
+ */
+
+.newComment {
+background: #0f0f0f;
+}
+
 
 /*
  * Menu
@@ -331,6 +339,7 @@ select {
 form {
 	margin: 30px auto;
 	text-align: center;
+	background: #0F0F0F;
 }
 
 input, textarea {
@@ -348,7 +357,7 @@ label {
 	max-width: auto;
 }
 input {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 7px 0;
 	text-align: center;
 }
