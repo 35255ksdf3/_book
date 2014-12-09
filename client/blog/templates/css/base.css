@@ -168,6 +168,14 @@ header h4 {
 }
 
 /*
+ * Post Module
+ */
+
+.post {
+margin: 0 10px;
+}
+
+/*
  * Glyphicons Sprites
  */
 .glyphicon {
