@@ -6,13 +6,13 @@
         <p>
             {{content}}
         </p>
-        <a id="reply">Reply</a>
+        <a class="replyToComment" id="replyToComment_{{id}}">Reply</a>
         <br/>
         {{#each comments}}
             {{> comment}}
         {{/each}}
         <p class="formReplyToComment collapsible collapsed">
-            {{> newComment}}
+            {{> Template.dynamic template=replyTemplate data=replyTemplateData}}
         </p>
     </div>
 </template>

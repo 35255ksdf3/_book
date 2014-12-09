@@ -1,6 +1,8 @@
 <template name="newComment">
     <div class="newComment">
         <p>New comment:</p>
+        <!-- If this has no value then this is the root comment -->
+        <input type="hidden" class="replyToId" value="{{replyToId}}" />
         <table>
             <tr>
                 <td>Title:</td>
