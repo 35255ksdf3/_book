@@ -1,17 +1,18 @@
 <template name="comment">
-    <h4>{{title}}</h4>
-    <h6>{{author}} - {{timestamp}} - ( <a href="">{{commentCount}} comments</a> )</h6>
-    <p>
-        {{content}}
-    </p>
-    <a href="">Reply</a>
-    <br/>
+    <div id="{{id}}">
+        <h4>{{title}}</h4>
+        <h6>{{author}} - {{timestamp}} - ( <a href="">{{commentCount}} comments</a> )</h6>
+
+        <p>
+            {{content}}
+        </p>
+        <a id="reply">Reply</a>
+        <br/>
         {{#each comments}}
             {{> comment}}
         {{/each}}
-    <!--
-    <p id="newComment" class="collapsed">
-        {{> newComment}}
-    </p>
-    -->
+        <p class="formReplyToComment collapsible collapsed">
+            {{> newComment}}
+        </p>
+    </div>
 </template>
