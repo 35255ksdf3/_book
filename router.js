@@ -3,6 +3,10 @@ Router.map(function(){
         path: '/',
         template: 'blog'
     });
+    this.route('profile', {
+        path: '/profile',
+        template: 'profile'
+    });
     this.route('post', {
         path: '/post/:_id',
         template: 'blogEntryFull',
