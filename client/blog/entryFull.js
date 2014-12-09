@@ -16,6 +16,7 @@ Template.entryFull.events({
         Posts.update({_id: this._id}, {
             "$push": {
                 "comments": {
+                    parent: (typeof this.id === "undefined" ? null : this.id),
                     id: this.commentCount,
                     author: 'ich',
                     timestamp: timestamp,
