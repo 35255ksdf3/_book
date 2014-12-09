@@ -1,41 +1,33 @@
+// @todo: 35 - Find out how to place this helper in a utility file
+/**
+ * A dependency variable.
+ * @param initialState The initial state
+ * @constructor
+ */
+ReactiveStateHelper = function(initialState) {
+    this._dep = new Deps.Dependency();
+    this._state = initialState;
 
-var CommentWidgetState = function () {
-    this._deps = {};
-    this._state = {};
-
-
-    // @todo: 35 - Check out if there is a way to do this without the id (replyTo expand/collapse)
-    this.addDep = function(id) {
-        this._deps[id] = new Deps.Dependency();
-        this._state[id] = true;
-    }
-
-    this.getCollapsed = function(id) {
-        if (typeof this._deps[id] === "undefined")
-            this.addDep(id);
-
-        this._deps[id].depend();
-        return this._state[id];
+    this.getState = function() {
+        this._dep.depend();
+        return this._state;
     };
 
-    this.setCollapsed = function(id, value) {
-        if (typeof this._deps[id] === "undefined")
-            this.addDep(id);
-
-        this._state[id] = value;
-        this._deps[id].changed();
+    this.setState = function(value) {
+        this._state = value;
+        this._dep.changed();
     };
-}
+};
 
-var _state = new CommentWidgetState();
+var _state = new ReactiveStateHelper();
 
 Template.comment.created = function() {
-    _state.addDep(this.id);
+    this.data._state = new ReactiveStateHelper(true);
 };
 
 Template.comment.helpers({
     replyTemplate: function () {
-        return _state.getCollapsed(this.id) ? "blank" : "newComment";
+        return this._state.getState() ? "blank" : "newComment";
     },
     replyTemplateData: function () {
         return {
@@ -53,10 +45,10 @@ Template.comment.events({
         var commentReplyArea = $("#" + this.id + " .formReplyToComment");
         if (commentReplyArea.hasClass("expanded")) {
             commentReplyArea.removeClass("expanded").addClass("collapsed");
-            _state.setCollapsed(this.id, true);
+            this._state.setState(true);
         } else {
             commentReplyArea.removeClass("collapsed").addClass("expanded");
-            _state.setCollapsed(this.id, false);
+            this._state.setState(false);
         }
     }
 });
