@@ -5,10 +5,22 @@ Router.map(function(){
     });
     this.route('post', {
         path: '/post/:_id',
-        template: 'entryFull',
+        template: 'blogEntryFull',
         notFoundTemplate: 'notFound',
         data: function() {
             return Posts.findOne({_id: this.params._id});
         }
+    });
+
+    this.route('backendViewEntry', {
+
+    });
+
+    this.route('backendDeleteEntry', {
+
+    });
+
+    this.route('backendMoveEntryToArchive', {
+
     });
 });

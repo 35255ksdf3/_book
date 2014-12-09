@@ -1,0 +1,24 @@
+<template name="blogBackend">
+  <table>
+    <th>
+    <td>Id</td>
+    <td>Author</td>
+    <td>Date</td>
+    <td>Title</td>
+    <td>Actions</td>
+    </th>
+    {{#each posts}}
+      <tr>
+          <td>{{_id}}</td>
+          <td>{{author}}</td>
+          <td>{{timestamp}}</td>
+          <td>{{title}}</td>
+          <td>
+              <a href="{{routeFor backendViewEntry}}">View</a>
+              <a href="{{routeFor backendDeleteEntry}}">Delete</a>
+              <a href="{{routeFor backendMoveEntryToArchive}}">Move to archive</a>
+          </td>
+      </tr>
+    {{/each}}
+  </table>
+</template>

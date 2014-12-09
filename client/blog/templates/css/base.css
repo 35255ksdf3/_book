@@ -171,7 +171,7 @@ header h4 {
  * Glyphicons Sprites
  */
 .glyphicon {
-	background: url(../images/glyphicon.png) no-repeat;
+	background: url('/images/glyphicon.png') no-repeat;
 }
 
 .usernav span {
@@ -206,7 +206,7 @@ header h4 {
  * Typoline
  */
 .line {
-	background: url("../images/logo_line.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
+	background: url("/images/logo_line.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
 	height: auto;
 	margin-: 6px 0 6px 0;;
 
@@ -309,7 +309,7 @@ ul.mainMenu li a:hover {
 }
 .form p {
 	padding-bottom: 24px;
-	background: url("../images/logo_line.png") center bottom no-repeat;
+	background: url("/images/logo_line.png") center bottom no-repeat;
 }
 select {
 	width: 100%;
@@ -349,7 +349,7 @@ input:focus, textarea:focus {
 textarea {
 	width: 886px;
 	padding: 7px 10px;
-	background: #fff url("../images/element.png") no-repeat left bottom;
+	background: #fff url("/images/element.png") no-repeat left bottom;
 }
 input.error, textarea.error {
 	border-color: #cc4847;
@@ -414,7 +414,7 @@ input[type='submit']:hover {
 }
 
 .profileimg {
-	background: #fff url('../images/mask.png') no-repeat center center;
+	background: #fff url('/images/mask.png') no-repeat center center;
 	float: left;
 	display: block;
 	margin: 14px;
