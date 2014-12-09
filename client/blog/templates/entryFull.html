@@ -5,7 +5,7 @@
         <h4>{{timestamp}}</h4>
         <h4>{{author}} - ( <a href="">{{commentCount}} comments</a> )</h4>
 
-        <div class='sixteen columns form'>
+        <div class='sixteen columns formpostbox'>
         <p>
             {{content}}
         </p>
@@ -13,7 +13,7 @@
         <p>
             {{> newComment}}
         </p>
-        <div class='sixteen columns form'>
+        <div class='sixteen columns formpostbox'>
         <p>
             {{#each comments}}
                 {{> comment}}
