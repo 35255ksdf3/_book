@@ -1,0 +1,219 @@
+<template name="profile">
+	<head>
+
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8">
+		<title>The Book</title>
+		<meta name="description" content="">
+		<meta name="author" content=" Made by Keyners">
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- PT Sans -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- Crete Roung -->
+		<link href='http://fonts.googleapis.com/css?family=Crete+Round&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- CSS
+		================================================== -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="css/layout.css">
+
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+		<script type="text/javascript" src="js/validate.js"></script>
+		<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("a[rel=example_group]").fancybox({
+					'transitionIn' : 'none',
+					'transitionOut' : 'none',
+					'titlePosition' : 'over',
+					'titleFormat' : function(title, currentArray, currentIndex, currentOpts) {
+						return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+					}
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+
+		<header>
+			<nav>
+				<div class='container'>
+					<div class='five columns logo'>
+						<a href='#'><img src="images/logo_bl_blog.png" style="margin: 5px 5px 5px -15px;"></a>
+					</div>
+					<ul class="six usernav">
+						<li>
+							<span class="glyphicon user"></span><a href="#">MaxMuster123</a>
+						</li>
+						<li>
+							<span class="glyphicon profile"></span><a href="#">Profil anzeigen</a>
+						</li>
+						<li>
+							<span class="glyphicon logout"></span><a href="#">ausloggen</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class='container'>
+				<div class='slogan'>
+					<div class='ten columns'>
+						<h1>Lorem et Ipsum</h1>
+						<h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</h2>
+					</div>
+
+					<div class='six columns'>
+						<h4>lorem et etisum.</h4>
+						<p>
+							Nunc rhoncus, erat quis sagittis convallis, arcu tellus tempor felis, sed tempor ipsum lorem vitae dolor. Morbi blandit condimentum lectus, id porta est sagittis et. Integer eget tortor sit amet ante eleifend lacinia quis ut
+						</p>
+						<a href='#' class='button medium green'>anmelden</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class='clear'></div>
+
+		<div class='container'>
+			<div class='sixteen column'>
+				<img class='profileimg' src='images/profile.fw.png' alt='profile'>
+				<h3> Max Muster123 ♂</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+				</p>				
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, dolore magna aliquyam erat.
+				</p>
+				<br>
+				<a href="#">Profilbild ändern</a>
+								<div class='sixteen columns line' style='margin-left: 0px;'>&nbsp;
+					</div>
+			</div>
+			<div class='sixteen columns form'>
+				<h3>Lorem ez sirim lorem</h3>
+				<h6>MaxMuster123 - 11/27/2014, 12:45:19 AM</h6>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+					<br>
+					<a href="#">weiterlesen...</a>
+				</p>
+			</div>
+
+			<div class='sixteen columns form'>
+				<h3>lorem et ambi et.</h3>
+				<h6>MaxMuster123 - 11/27/2014, 12:45:19 AM</h6>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+					<br>
+					<a href="#">weiterlesen...</a>
+				</p>
+				<form>
+					<label>Title</label>
+					<input type='text' name='mail' placeholder='This is a Title'>
+					<label>Message</label>
+					<textarea cols='50' rows='15' name='message' placeholder='This is a Message'></textarea>
+					<input type='submit' value='post'>
+				</form>
+			</div>
+		</div>
+
+		<div class='clear'></div>
+
+		<footer>
+			<div class='container'>
+
+				<div class='eight columns'>
+					<h5>Lorem ispmus et lorem</h5>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+				</div>
+
+				<div class='four columns social'>
+					<h5>Social media</h5>
+					<a href='#'><img src='images/social/dribbble.png'></a>
+					<a href='#'><img src='images/social/facebook.png'></a>
+					<a href='#'><img src='images/social/twitter.png'></a>
+					<a href='#'><img src='images/social/forrst.png'></a>
+				</div>
+
+				<div class='four columns'>
+					<h5>Get in touch</h5>
+					<p>
+						You can call us at:
+						<br>
+						t: 161 - 123 - CALL - NOW
+					</p>
+					<p>
+						Or drop us a line on:
+						e: <a href='mailto:contact@free.com'>contact@free.com</a>
+					</p>
+				</div>
+
+				<a id='top' href='#'>&uarr;</a>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var form = $('form');
+
+			$(document).ready(function() {
+				form.validate({
+					ignore : "",
+					rules : {
+						'message' : {
+							required : true,
+						},
+						'name' : {
+							required : true,
+						},
+						'mail' : {
+							required : true,
+							email : true
+						}
+					},
+					errorPlacement : function(error, element) {
+					}
+				});
+			});
+		</script>
+
+		<script type="text/javascript">
+			var toper = $('a#top');
+
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 100) {
+					toper.fadeIn(200);
+				} else {
+					toper.fadeOut(200);
+				}
+			});
+
+			toper.click(function() {
+				$('html, body').animate({
+					scrollTop : 0
+				}, 500);
+				return false;
+			});
+		</script>
+
+	</body>
+</template>
