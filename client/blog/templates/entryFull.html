@@ -1,1 +1,24 @@
-<template name="entryFull"></template>
+<template name="entryFull">
+    <div class='clear'></div>
+    <div class='container'>
+        <h3>{{title}}</h3>
+        <h4>{{timestamp}}</h4>
+        <h4>{{author}} - ( <a href="">{{commentCount}} comments</a> )</h4>
+
+        <div class='sixteen columns form'>
+        <p>
+            {{content}}
+        </p>
+            </div>
+        <p>
+            {{> newComment}}
+        </p>
+        <div class='sixteen columns form'>
+        <p>
+            {{#each comments}}
+                {{> comment}}
+            {{/each}}
+        </p>
+            </div>
+    </div>
+</template>

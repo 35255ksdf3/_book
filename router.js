@@ -1,4 +1,5 @@
 Router.map(function(){
+
     this.route('home', {
         path: '/',
         template: 'frame',
@@ -7,6 +8,7 @@ Router.map(function(){
             this.next();
         }
     });
+
     this.route('blog', {
         path: '/blog',
         template: 'frame',
@@ -15,6 +17,7 @@ Router.map(function(){
             this.next();
         }
     });
+
     this.route('profile', {
         path: '/profile',
         template: 'frame',
@@ -23,10 +26,15 @@ Router.map(function(){
             this.next();
         }
     });
+
     this.route('post', {
         path: '/post/:_id',
-        template: 'blogEntryFull',
+        template: 'frame',
         notFoundTemplate: 'notFound',
+        onBeforeAction: function() {
+            Session.set("page", "entryFull")
+            this.next();
+        },
         data: function() {
             return Posts.findOne({_id: this.params._id});
         }
