@@ -1,14 +1,6 @@
 Template.blog.helpers({
     posts: function () {
         return Posts.find();
-    },
-
-    canPost: function () {
-        return true;
-    },
-
-    isModerator: function () {
-        return true;
     }
 });
 
