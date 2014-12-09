@@ -56,3 +56,16 @@
 	    font-weight: normal;
 	    font-style: normal; }
 */
+
+.collapsible {
+	display:block;
+}
+
+.collapsible .collapsed {
+	height:0px;
+	overflow: hidden;
+}
+
+.collapsible .expanded {
+	height:auto;
+}

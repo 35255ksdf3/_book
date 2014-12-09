@@ -1,5 +1,5 @@
 Template.entrySmall.helpers({
-    commentCount: function () {
+    /*commentCount: function () {
         return this.comments.length;
-    }
+    }*/
 });

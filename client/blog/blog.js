@@ -15,6 +15,7 @@ Template.blog.events({
             timestamp: timestamp,
             title: title,
             content: content,
+            commentCount: 0,
             comments: []
         });
 
