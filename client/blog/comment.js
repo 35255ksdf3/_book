@@ -1,41 +1,36 @@
-
-var CommentWidgetState = function () {
+/**
+ * Can be used to manage the state of a widget (more or less like the session)
+ */
+WidgetState = function() {
     this._deps = {};
     this._state = {};
 
-
-    // @todo: 35 - Check out if there is a way to do this without the id (replyTo expand/collapse)
-    this.addDep = function(id) {
+    // @todo: 35 - Check out if there is a way to do this without the id (behaves too much like Session)
+    this.addState = function(id, initialState) {
         this._deps[id] = new Deps.Dependency();
-        this._state[id] = true;
+        this._state[id] = initialState;
     }
 
-    this.getCollapsed = function(id) {
-        if (typeof this._deps[id] === "undefined")
-            this.addDep(id);
-
+    this.getState = function(id) {
         this._deps[id].depend();
         return this._state[id];
     };
 
-    this.setCollapsed = function(id, value) {
-        if (typeof this._deps[id] === "undefined")
-            this.addDep(id);
-
+    this.setState = function(id, value) {
         this._state[id] = value;
         this._deps[id].changed();
     };
-}
+};
 
-var _state = new CommentWidgetState();
+var _state = new WidgetState();
 
 Template.comment.created = function() {
-    _state.addDep(this.id);
+    _state.addState(this.data.id, true);
 };
 
 Template.comment.helpers({
     replyTemplate: function () {
-        return _state.getCollapsed(this.id) ? "blank" : "newComment";
+        return _state.getState(this.id) ? "blank" : "newComment";
     },
     replyTemplateData: function () {
         return {
@@ -53,10 +48,10 @@ Template.comment.events({
         var commentReplyArea = $("#" + this.id + " .formReplyToComment");
         if (commentReplyArea.hasClass("expanded")) {
             commentReplyArea.removeClass("expanded").addClass("collapsed");
-            _state.setCollapsed(this.id, true);
+            _state.setState(this.id, true);
         } else {
             commentReplyArea.removeClass("collapsed").addClass("expanded");
-            _state.setCollapsed(this.id, false);
+            _state.setState(this.id, false);
         }
     }
 });
