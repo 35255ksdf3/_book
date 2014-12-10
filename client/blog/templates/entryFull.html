@@ -1,11 +1,11 @@
 <template name="entryFull">
     <div class='clear'></div>
-    <div class='container'>
+    <div class='sixteen container formpostbox'>
         <h3>{{title}}</h3>
         <h4>{{timestamp}}</h4>
         <h4>{{author}} - ( <a href="">{{commentCount}} comments</a> )</h4>
 
-        <div class='sixteen columns formpostbox'>
+        <div class='sixteen formpostbox'>
         <p>
             {{content}}
         </p>
@@ -13,7 +13,7 @@
         <p>
             {{> newComment}}
         </p>
-        <div class='sixteen columns formpostbox'>
+        <div class='sixteen container formpostbox'>
         <p>
             {{#each comments}}
                 {{> comment}}

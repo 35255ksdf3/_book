@@ -44,7 +44,8 @@ h2 {
 	font-size: 22px;
 }
 h3 {
-	font-size: 24px;
+	font-size: 24px !important;
+	line-height: 44px;
 	font-family: 'Crete Round', Georgia, serif;
 	font-weight: 400;
 	padding: 20px 0;
@@ -219,14 +220,6 @@ margin: 0 10px;
 	margin-: 6px 0 6px 0;;
 
 }
-/*
- * NewComment
- */
-
-.newComment {
-background: #0f0f0f;
-}
-
 
 /*
  * Menu
@@ -330,6 +323,13 @@ ul.mainMenu li a:hover {
 	background-position: center bottom;
 	}
 
+/*
+ * NewComment
+ */
+
+.newComment {
+background: #0f0f0f;
+}
 select {
 	width: 100%;
 	margin: 0 0 20px 0;
@@ -337,29 +337,27 @@ select {
 	text-align: center;
 }
 form {
-	margin: 30px auto;
 	text-align: center;
 	background: #0F0F0F;
 }
 
 input, textarea {
-	width: 936px;
+	width: auto;
 	float: left;
-	margin: 0 10px;
 	padding: 0;
 	font-size: 12px;
 }
 label {
 	float: left;
-	width: 936px;
-	margin: 10px !important;
+	width: auto;
 	text-align: center;
 	max-width: auto;
 }
 input {
-	margin-bottom: 10px;
-	padding: 7px 0;
+	width: 98.4%;
+	padding: 7px;
 	text-align: center;
+	text-align: left;
 }
 input, textarea {
 	border: 1px solid #ddd;
@@ -369,8 +367,8 @@ input:focus, textarea:focus {
 	border-color: #b6b6b6;
 }
 textarea {
-	width: 916px;
-	padding: 7px 10px;
+	width: 98.4%;
+	padding: 7px;
 	background: #fff url("/images/element.png") no-repeat left bottom;
 }
 input.error, textarea.error {
@@ -564,12 +562,6 @@ footer .social a:hover img {
 	.usernav {
 		display: none;
 	}
-	input[type="submit"] {
-		width: 402px;
-	}
-	textarea {
-		width: 380px;
-	}
 
 	.container .one-third.column, .container .eight.columns, .container .four.columns {
 		margin-bottom: 40px;
@@ -597,16 +589,6 @@ footer .social a:hover img {
 		width: 200px;
 	}
 
-	form, label, input {
-		width: 300px;
-	}
-	input[type="submit"] {
-		width: 302px;
-	}
-	textarea {
-		width: 280px;
-	}
-
 	.container .one-third.column, .container .eight.columns, .container .four.columns {
 		margin-bottom: 40px;
 	}
@@ -615,5 +597,12 @@ footer .social a:hover img {
 		max-heigt: auto;
 		margin: 0 0 14px 0 !important;
 	}
+	input, textarea {
+    margin-left: -10px !important;
+    width: 101%;
+    }
+    .green{
+    width: 97.2%;
+    margin-left: -10px !important;}
 }
 
